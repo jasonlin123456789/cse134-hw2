@@ -3,11 +3,6 @@
   <head>
     <meta charset="utf-8" />
 
-    <!-- Pragma Directives -->
-
-    <!-- <meta http-equiv="refresh" content="5" /> -->
-    <meta http-equiv="content-security-policy" content="default-src https:" />
-
     <!-- Google SEO Meta Tags -->
     <meta
       name="description"
@@ -26,14 +21,14 @@
     <meta property="og:title" content="When Great Minds Don’t Think Alike" />
     <meta property="og:description" content="Jason Lin Portfolio" />
 
-    <!-- PWA Tags -->
-
-    <link rel="manifest" href="manifest.json" />
-
-    <!-- Custom Tags -->
-    <!-- <meta name="description" content="This is a sample recipe website"> -->
-
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+      article {
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
 
     <title>Jason Lin Portfolio</title>
   </head>
@@ -162,7 +157,7 @@
 
       <section id="resume">
         <h2>Resume</h2>
-
+        <p> <a href="/assets/resume.pdf">Download Resume</a></p>
       </section>
 
       <section id="contact">
@@ -207,28 +202,54 @@
 
       <div id="lab">
         <h2>Lab and Experiment</h2>
-        <audio controls>
-          <source src="/assets/sample-audio.mp3" type="audio/mp3" />
-        </audio>
-        <br />
-        <video controls>
-          <source src="/assets/baking-video.mp4" type="video/mp4" />
-        </video>
-        <figure>
-          <img src="/assets/image-product-mobile.jpg" alt="picture of perfume" />
-          <figcaption>A perfume on display</figcaption>
-        </figure>
-        <picture>
-          <source srcset="assets/image-product-desktop.avif" />
-          <img src="/assets/image-product-desktop.jpg" alt="picture of perfume"/>
-        </picture>
-        <br />
         <details>
-          <summary>Hello!</summary>
-          If this is your first time here, please like and share!
+          <summary>Click to show all the experiments with HTML tags!</summary>
+          <audio controls>
+            <source src="/assets/sample-audio.mp3" type="audio/mp3" />
+          </audio>
+          <br />
+          <video controls>
+            <source src="/assets/baking-video.mp4" type="video/mp4" />
+          </video>
+          <figure>
+            <img src="/assets/image-product-mobile.jpg" alt="picture of perfume" />
+            <figcaption>A perfume on display</figcaption>
+          </figure>
+          <picture>
+            <source srcset="assets/image-product-desktop.avif" />
+            <img src="/assets/image-product-desktop.jpg" alt="picture of perfume"/>
+          </picture>
+          <br />
+          <iframe
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            width="300"
+            height="200"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+          </iframe>
+          <br />
+          <canvas id="rectangle">
+            Your browser does not support the canvas tag.
+          </canvas>
+          <script>
+            let canvas = document.getElementById("rectangle");
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, 80, 80);
+          </script>
+          <br/>
+          <em>
+            Testing svg inside inline tag 
+            <svg viewBox="0 0 10 10" x="200" width="100">
+              <circle cx="5" cy="5" r="4" />
+            </svg>
+          </em>
+          <p>
+            The only Javascript code I remember is <code>.getElementByID()</code>. 
+          </p>
+          <template>this message is hidden.</template>
+          <aside>This section is only to satisfy hw2 requirement</aside>
         </details>
-        <template> I am hidden.</template>
-        <aside>My favorite food is sushi.</aside>
 
         <h3>Extra Credit</h3>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
