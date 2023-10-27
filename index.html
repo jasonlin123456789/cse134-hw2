@@ -39,10 +39,10 @@
   </head>
   <body>
     <header>
-      <h1>Jason Lin</h1>
+      <h1 id="home">Jason Lin</h1>
       <nav>
         <ul>
-          <li><a href="#projects">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects and Skills</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact Me</a></li>
@@ -51,6 +51,11 @@
     </header>
     <main>
 
+      <section id="bio">
+        <p>
+          Short bio
+        </p>
+      </section>
 
       <section id="projects">
         <h2>Projects and Skills</h2>
@@ -60,8 +65,8 @@
             <a href="https://github.com/CSE-110-Winter-2023/Social_Compass">Social Compass</a>
           </nav>
           <p>
-            This is an <em>Android App</em> that allows you to share and 
-            see the position of your friends displayed as a compass.
+            This is an <b>Android</b> App that allows you to share and 
+            see the position of your friends displayed on a compass.
           </p>
           <Strong>Skills displayed: </Strong>
           <ul>
@@ -73,8 +78,7 @@
           <ol>
             Design Pattern Used:
             <li>
-              Strategy
-            </li>
+              Strategy</li>
             <li>Adapter</li>
             <li>Observer</li>
             <li>Builder</li>
@@ -88,8 +92,9 @@
             <a href="https://github.com/jasonlin123456789/BattleBuddy">Battle Buddy</a>
           </nav>
           <p>
-            This is an <em>IOS App</em> that allows you to calculate bullet damage
-            from the game Escape from Tarkov.
+            This is an <b>IOS</b> App that includes various simulation that allows
+            users to educate themselves on the mechanics of the game 
+            <i>Escape from Tarkov</i>
           </p>
           <Strong>Skills displayed: </Strong>
           <ul>
@@ -141,6 +146,10 @@
         <article>
           <h3>Skills</h3>
           <table>
+            <colgroup>
+              <col span="1" id="programming_languages"/>
+              <col span="1" id="proficiency"/>
+            </colgroup>
             <tr>
               <th>Programming Languages</th>
               <th>Proficiency</th>
@@ -177,8 +186,8 @@
             <label>Who are you</label>
             <input type="radio" id="employer" name="identity" />
             <label for="employer">Employer</label>
-            <input type="radio" id="programmer" name="identity" />
-            <label for="programmer">Fellow Programmer</label>
+            <input type="radio" id="other" name="identity" />
+            <label for="other">Other</label>
             <br />
             <label for="country">Select your country:</label>
             <select id="country">
@@ -193,7 +202,7 @@
               </optgroup>
             </select>
             <br />
-            <label for="continent">Select your purpose:</label>
+            <label for="purposes">Select your purpose:</label>
             <datalist id="purposes">
               <option value="Job Offer"></option>
               <option value="Other Inquiry"></option>
